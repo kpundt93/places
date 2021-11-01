@@ -30,19 +30,24 @@ Destination.prototype.findLocation = function(id) {
 };
 
 // UI Logic
+let destination = new Destination();
 
 $(document).ready(function() {
-  $("#new-location").submit(function(event) {
+  $("form#new-location").submit(function(event) {
     event.preventDefault();
 
-    const location = $("#location").val();
-    const landmark = $("#landmark").val();
-    const time = $("#time").val();
-    const notes = $("#notes").val();
+    const location = $("input#new-location-name").val();
+    const landmark = $("input#new-landmark").val();
+    const time = $("input#new-time").val();
+    const notes = $("input#new-notes").val();
 
-    $("#output").append("<li>" + location + "</li>");
-    $("#output").append("<li>" + landmark + "</li>");
-    $("#output").append("<li>" + time + "</li>");
-    $("#output").append("<li>" + notes + "</li>");
+    let newLocation = new Location(location, landmark, time, notes);
+    destination.addLocation(newLocation);
+    console.log(destination.locations);
+
+    $("#show-location").append("<li>" + location + "</li>");
+    $("#show-location").append("<li>" + landmark + "</li>");
+    $("#show-location").append("<li>" + time + "</li>");
+    $("#show-location").append("<li>" + notes + "</li>");
   });
 });
