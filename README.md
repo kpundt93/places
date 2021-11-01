@@ -18,10 +18,10 @@
 _View prompt here: https://www.learnhowtoprogram.com/intermediate-javascript/object-oriented-javascript/address-book-places-you-ve-been-to-do_
 
 # Specs
-Describe: destination()
-* _Test:
-  Code:
-  Expected Output:_
+Describe: Destination()
+* _Test: It will return an object of test data with properties for location, landmarks, time of the year, and notes.
+  Code: Destination(location, landmarks, time, notes)
+  Expected Output: location: "Cannon Beach", landmarks: "Haystack Rock", time: "Spring", notes: "Bring a raincoat!"_
 
 * _Test:
   Code:
