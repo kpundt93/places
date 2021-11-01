@@ -17,19 +17,26 @@
 
 _View prompt here: https://www.learnhowtoprogram.com/intermediate-javascript/object-oriented-javascript/address-book-places-you-ve-been-to-do_
 
-# Specs
+# Specs/Tests
 Describe: Destination()
-* _Test: It will return an object of test data with properties for location, landmarks, time of the year, and notes.
-  Code: Destination(location, landmarks, time, notes)
-  Expected Output: location: "Cannon Beach", landmarks: "Haystack Rock", time: "Spring", notes: "Bring a raincoat!"_
+* _Test: It will initialize a Location object.
+  Code: new Destination();
+  Expected Output: { locations: { }}_
 
-* _Test:
-  Code:
-  Expected Output:_
+Describe: Destination.prototype.assignId 
+* _Test: It will take the current ID and increment it by 1.
+  Code: this.currentId += 1;
+  Expected Output: id: 1_
 
-* _Test:
-  Code:
-  Expected Output:_
+Describe: Destination.prototype.addLocation
+* _Test: It will assign a unique ID to each new location.
+  Code: this.locations[location.id] = location;
+  Expected Output: location: "Cannon Beach", landmarks: "Haystack Rock", time: "Spring", notes: "Bring a raincoat!" id: 1_
+
+Describe: Location()
+* _Test: It will create a new Location object with properties for name, landmarks, time, and notes.
+  Code: Location("Cannon Beach", "Haystack Rock", "Spring", "Bring a jacket!")
+  Expected Output: name: "Cannon Beach", landmarks: "Haystack Rock", time: "Spring", notes: "Bring a jacket!"_
 
 ## Setup/Installation Requirements
 
