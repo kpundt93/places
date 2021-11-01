@@ -38,6 +38,11 @@ Describe: Location()
   Code: Location("Cannon Beach", "Haystack Rock", "Spring", "Bring a jacket!")
   Expected Output: name: "Cannon Beach", landmarks: "Haystack Rock", time: "Spring", notes: "Bring a jacket!"_
 
+  Describe; Destination.prototype.findLocation()
+  *_Test: It will search for a location using the unique id
+  Code: Destination.prototype.findLocation{}
+  Expected Output: name: "Cannon Beach", landmarks: "Haystack Rock", time: "Spring", notes: "Bring a jacket!", id: 1
+
 ## Setup/Installation Requirements
 
 * _Navigate to https://github.com/kpundt93/places
